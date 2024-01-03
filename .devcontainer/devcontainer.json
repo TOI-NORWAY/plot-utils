@@ -1,0 +1,78 @@
+{
+    "name": "toi-python-module-template",
+
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+
+    // Docker container name:
+    "runArgs": [
+        "--name",
+        "${localWorkspaceFolderBasename}-${localEnv:USER}${localEnv:USERNAME}"
+    ],
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.tabSize": 4,
+                "editor.insertSpaces": true,
+                "editor.detectIndentation": false,
+                "prettier.useTabs": true,
+                "jupyter.jupyterServerType": "remote",
+                "python.formatting.provider": "none",
+                "python.defaultInterpreterPath": ".venv/bin/python",
+                "python.venvPath": ".venv",
+                "python.languageServer": "Pylance",
+                "python.linting.enabled": false,
+                "python.linting.pylintEnabled": false,
+                "python.formatting.blackArgs": [],
+                "python.autoComplete.extraPaths": [],
+                "python.analysis.extraPaths": [],
+                "python.analysis.typeCheckingMode": "strict",
+                "python.analysis.stubPath": "typings",
+                "python.analysis.diagnosticSeverityOverrides": {},
+                "python.analysis.completeFunctionParens": true,
+                "editor.defaultFormatter": "ms-python.black-formatter",
+                "python.editor.formatOnType": true
+            },
+
+            "extensions": [
+                "stkb.rewrap",
+                "gruntfuggly.todo-tree",
+                "mikestead.dotenv",
+                // Python:
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "ms-toolsai.jupyter",
+                // Markdown:
+                "davidanson.vscode-markdownlint",
+                "yzhang.markdown-all-in-one",
+                "bierner.markdown-footnotes",
+                // HTML:
+                "formulahendry.auto-rename-tag",
+                // TOML:
+                "tamasfe.even-better-toml",
+                // SCSS:
+                "stylelint.vscode-stylelint",
+                // GitHub:
+                "GitHub.copilot",
+                "GitHub.copilot-labs"
+            ]
+        }
+    },
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [8888],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // Required to execute `CMD` in Dockerfile. See <https://github.com/microsoft/vscode-remote-release/issues/458#issuecomment-496247295>.
+    "overrideCommand": true,
+
+    "postStartCommand": "poetry install",
+
+    // Connect as root. More info: https://aka.ms/dev-containers-non-root.
+    "remoteUser": "root"
+}
