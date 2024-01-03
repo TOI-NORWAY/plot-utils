@@ -7,7 +7,7 @@
 - `examples/`: Examples of how to use your package in a script or in a notebook.
 - `pyproject.toml`: Info about the package and its dependencies.
 - `README.md`: This file.
-- `src/<PYTHON_PACKAGE_NAME>`: The python package with modules (`*.py` files).
+- `src/plotutils`: The python package with modules (`*.py` files).
 
 ## About
 
@@ -21,20 +21,20 @@ See [`examples/example.py`](examples/example.py) or [`examples/example.ipynb`](e
 
 ## How to install your package
 
-Replace `<VERSION>` with any available version number from your package's repository and `<PYTHON_PACKAGE_NAME>` with the name of your package.
+Replace `<VERSION>` with any available version number from your package's repository and `plotutils` with the name of your package.
 
 ### Install with pip
 
 Add the following to your `requirements.txt` file:
 
 ```txt
-<PYTHON_PACKAGE_NAME> @ git+https://<TOI_PACKAGE_TOKEN>@github.com/TOI-NORWAY/<REPRO_NAME>.git@v<VERSION>
+plotutils @ git+https://<TOI_PACKAGE_TOKEN>@github.com/TOI-NORWAY/<REPRO_NAME>.git@v<VERSION>
 ```
 
 or run the following command:
 
 ```bash
-pip install "<PYTHON_PACKAGE_NAME> @ git+https://<TOI_PACKAGE_TOKEN>@github.com/TOI-NORWAY/<REPRO_NAME>.git@v<VERSION>"
+pip install "plotutils @ git+https://<TOI_PACKAGE_TOKEN>@github.com/TOI-NORWAY/<REPRO_NAME>.git@v<VERSION>"
 ```
 
 ### Install with Poetry
@@ -42,5 +42,5 @@ pip install "<PYTHON_PACKAGE_NAME> @ git+https://<TOI_PACKAGE_TOKEN>@github.com/
 Add the following to your `pyproject.toml` file's `[tool.poetry.dependencies]` section:
 
 ```txt
-<PYTHON_PACKAGE_NAME> = { git = "https://<TOI_PACKAGE_TOKEN>@github.com/TOI-NORWAY/<REPRO_NAME>.git", tag = "v<VERSION>" }
+plotutils = { git = "https://<TOI_PACKAGE_TOKEN>@github.com/TOI-NORWAY/<REPRO_NAME>.git", tag = "v<VERSION>" }
 ```

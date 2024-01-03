@@ -1,9 +1,9 @@
 [tool.poetry]
-name = "template"
+name = "plotutils"
 # Version isn't used when installing from GitHub, so we set it to 0:
 version = "0"
-description = "This is a template for a Python package"
-authors = ["Simen Sørbøe Klommestein <sss@toi.no>"]
+description = "This is a collection of plotting utilities for use in Jupyter notebooks."
+authors = ["Christian Weber <cwe@toi.no>"]
 readme = "README.md"
 
 
@@ -11,6 +11,9 @@ readme = "README.md"
 python = "^3.11"
 # Add package dependencies here:
 pandas = "^2.0.0"
+matplotlib = "^3.8.2"
+seaborn = "^0.13.1"
+
 
 
 [tool.poetry.group.dev.dependencies]

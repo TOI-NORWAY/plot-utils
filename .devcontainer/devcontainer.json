@@ -1,5 +1,5 @@
 {
-    "name": "toi-python-module-template",
+    "name": "plot-utils",
 
     "build": {
         "dockerfile": "Dockerfile",
@@ -7,10 +7,7 @@
     },
 
     // Docker container name:
-    "runArgs": [
-        "--name",
-        "${localWorkspaceFolderBasename}-${localEnv:USER}${localEnv:USERNAME}"
-    ],
+    "runArgs": ["--name", "${localWorkspaceFolderBasename}"],
 
     "customizations": {
         "vscode": {
@@ -29,7 +26,7 @@
                 "python.formatting.blackArgs": [],
                 "python.autoComplete.extraPaths": [],
                 "python.analysis.extraPaths": [],
-                "python.analysis.typeCheckingMode": "strict",
+                "python.analysis.typeCheckingMode": "basic",
                 "python.analysis.stubPath": "typings",
                 "python.analysis.diagnosticSeverityOverrides": {},
                 "python.analysis.completeFunctionParens": true,
