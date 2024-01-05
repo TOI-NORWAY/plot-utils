@@ -60,3 +60,17 @@ def savefig(
             print("saved " + filename + e)
     else:
         pass
+
+
+def legend_cleaner(legend):
+    """
+    Remove underscores in legend title and labels.
+    """
+    # Get the current title, replace underscores with spaces and set it as the new title
+    new_title = legend.get_title().get_text().replace("_", " ")
+    legend.set_title(new_title)
+
+    # Do the same for the legend labels
+    new_labels = [t.get_text().replace("_", " ") for t in legend.texts]
+    for t, l in zip(legend.texts, new_labels):
+        t.set_text(l)
