@@ -88,3 +88,17 @@ def axis_tick_label_cleaner(ax):
     ax.set_xticklabels(new_ticklabels)
 
     return ax
+
+
+# similar to the legend_cleaner, but for axis labels:
+def axis_label_cleaner(ax):
+    """
+    Remove underscores in axis labels.
+    """
+    # Get the current tick labels, replace underscores with spaces and set it as the new tick labels
+    new_xlabel = ax.get_xlabel().replace("_", " ")
+    new_ylabel = ax.get_ylabel().replace("_", " ")
+    ax.set_xlabel(new_xlabel)
+    ax.set_ylabel(new_ylabel)
+
+    return ax
