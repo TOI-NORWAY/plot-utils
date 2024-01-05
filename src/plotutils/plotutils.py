@@ -74,3 +74,16 @@ def legend_cleaner(legend):
     new_labels = [t.get_text().replace("_", " ") for t in legend.texts]
     for t, l in zip(legend.texts, new_labels):
         t.set_text(l)
+
+
+
+# similar to the legend_cleaner, but for axis tick labels:
+def axis_tick_label_cleaner(ax):
+    """
+    Remove underscores in axis tick labels.
+    """
+    # Get the current tick labels, replace underscores with spaces and set it as the new tick labels
+    new_ticklabels = [t.get_text().replace("_", " ") for t in ax.get_xticklabels()]
+    ax.set_xticklabels(new_ticklabels)
+
+    return ax
