@@ -20,10 +20,22 @@ def hello():
 from cycler import cycler
 import matplotlib.pyplot as plt
 
-toi_clrs = ["#d3741c", "#3f868d", "#c5cc8e", "#ffe271", "#8bc9dd", "#336699"]
+toi_clrs = [
+    "#65939D",
+    "#D3741C",
+    "#c5cc8e",
+    "#ffe271",
+    "#8bc9dd",
+    "#336699",
+    "#80217E",
+    "#7d6a55",
+]
 plt.rcParams["axes.prop_cycle"] = cycler("color", toi_clrs)
 # define color shortcuts for manual color setting
-green_, orange_ = "#3f868d", "#d3741c"
+green_, orange_ = (
+    "#65939D",
+    "#D3741C",
+)
 
 
 def savefig(
