@@ -29,6 +29,8 @@ toi_clrs = [
     "#336699",
     "#80217E",
     "#7d6a55",
+    "#c7a0ca",
+    "#a8cbd1",
 ]
 plt.rcParams["axes.prop_cycle"] = cycler("color", toi_clrs)
 # define color shortcuts for manual color setting
@@ -74,7 +76,6 @@ def legend_cleaner(legend):
     new_labels = [t.get_text().replace("_", " ") for t in legend.texts]
     for t, l in zip(legend.texts, new_labels):
         t.set_text(l)
-
 
 
 # similar to the legend_cleaner, but for axis tick labels:
