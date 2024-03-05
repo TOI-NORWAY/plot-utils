@@ -2,6 +2,7 @@
 
 
 import logging
+import os
 
 # Always use the module-level logger, so that it can be configured by the end user.
 # Logging configuration should be done by the end user, not in the module.
@@ -38,6 +39,23 @@ green_, orange_ = (
     "#65939D",
     "#D3741C",
 )
+
+
+def check_folder():
+    """
+    check if os.listdir('.') contains src:
+    if not, go up one folder
+    """
+    if "src" not in os.listdir("."):
+        # go up one folder with os.chdir:
+        os.chdir("..")
+        # %cd ..  # ipython-magic approach
+        # print('went up one folder') # for debugging
+        check_folder()
+
+    else:
+        # print('already in correct folder')
+        pass
 
 
 def savefig(
