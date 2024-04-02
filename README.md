@@ -28,13 +28,13 @@ Replace `<VERSION>` with any available version number from your package's reposi
 Add the following to your `requirements.txt` file:
 
 ```txt
-plotutils @ git+https://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@github.com/TOI-NORWAY/plot-utils.git
+plotutils @ git+https://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@github.com/TOI-NORWAY/plot-utils.git
 ```
 
 or run the following command:
 
 ```bash
-pip install "plotutils @ git+https://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@github.com/TOI-NORWAY/plot-utils.git"
+pip install "plotutils @ git+https://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@github.com/TOI-NORWAY/plot-utils.git"
 ```
 
 ### Install with Poetry
