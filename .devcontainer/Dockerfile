@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Build from official VSC Docker image:
-FROM mcr.microsoft.com/devcontainers/python:3.11
+FROM mcr.microsoft.com/devcontainers/python:3.12
 
 # Keep Python from generating .pyc files in the container:
 ENV PYTHONDONTWRITEBYTECODE=1
